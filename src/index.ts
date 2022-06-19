@@ -1,3 +1,5 @@
+import { todoData, userData } from "./fetchRequests"
 import "./style.css"
 
-console.log('Hello!');
+console.log(userData);
+console.log(todoData);

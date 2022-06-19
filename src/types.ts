@@ -1,4 +1,4 @@
-type Task = {
+type Todo = {
     userId: number,
     id: number,
     title: string,
@@ -34,4 +34,4 @@ type User = {
     website: string,
     company: UserCompany
 }
-export type { Task, User, UserAddress, UserAddressGeo, UserCompany }
+export type { Todo, User, UserAddress, UserAddressGeo, UserCompany }

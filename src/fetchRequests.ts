@@ -1,3 +1,5 @@
+import { Todo, User } from "./types";
+
 async function getJson(url: string) {
     try {
         const response = await fetch(url);
@@ -8,4 +10,6 @@ async function getJson(url: string) {
     }
 }
 
-export {}
+export const [userData, todoData] = await Promise.all(
+    ['users', 'todos'].map(f => getJson(`https://jsonplaceholder.typicode.com/${f}`))
+    ) as [User[], Todo[]];
